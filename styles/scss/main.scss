@@ -1,0 +1,126 @@
+@import "normalize";
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+body {
+  font-family: "Bellota Text",cursive;
+
+}
+.promotions {
+  &__title-wrapper {
+    margin:80px 0 35px 50%;
+
+  }
+  &__section-subtitle {
+    font-size: 21px;
+    color: #092a5b;
+    text-transform: uppercase;
+    font-weight: 400 ;
+    padding: 5px 0 5px ;
+  }
+  &__section-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+  }
+
+  &__carousel-wrapper {
+  }
+  &__carousel-item {
+    width: 360px;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+  }
+  &__carousel-bg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__emerging-box {
+    width: 100%;
+    height: 552px;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.6) 100%);
+    transition: top 0.6s;
+  }
+  &__carousel-item:hover {
+    .promotions__emerging-box {
+      top: -92px;
+    }
+    .promotions__emerging-desc {
+      opacity: 1;
+    }
+  }
+  &__emerging-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -29%);
+    width: 280px;
+    text-align: center;
+    color: #fff;
+  }
+  &__emerging-title {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
+  &__emerging-desc{
+    opacity: 0;
+    font-size: 19px;
+    margin-bottom: 50px;
+    transition: opacity 0.5s;
+  }
+  &__link-wrapper {
+    transition: all .5s;
+  }
+  &__emerging-link {
+    padding: 10px 0 ;
+    text-transform: uppercase;
+    position: relative;
+  }
+  &__link-icon {
+    position: relative;
+    margin-right: 5px;
+    color: white;
+    font-size: 11px;
+    font-weight: lighter;
+  }
+  &__link-icon:after {
+    content: '';
+    width: 35px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+  }
+  &__emerging-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width:  40%;
+    border-radius: 50%;
+    background-color: #369ce0;
+    opacity: 0.5;
+    transition: all .5s;
+    z-index: -1;
+  }
+  &__emerging-link:hover:before {
+      width: 115%;
+      border-radius: 25px;
+
+  }
+}
